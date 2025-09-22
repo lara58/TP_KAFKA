@@ -14,7 +14,7 @@ docker exec kafka kafka-topics --create --topic weather_stream --bootstrap-serve
 
 ## Résultat de l'exercice 1
 
-![Capture de l'exercice 1](exo.png)
+![Capture de l'exercice 1](exo1.png)
 
 Le screenshot montre :
 - La création du topic `weather_stream`
