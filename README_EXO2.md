@@ -34,11 +34,11 @@ python consumer.py weather_stream
 ```
 
 ## R├®sultat de l'exercice 2
-
-![Capture de l'exercice 2] (exo2.png)
+![Capture de l'exercice 2](exo2.png)
 Le screenshot montre :
 - Le script consumer.py en action
 - Lecture des messages depuis le topic weather_stream
 - Affichage en temps r├®el des messages re├ºus
+
 
 
