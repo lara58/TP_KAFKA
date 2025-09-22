@@ -84,53 +84,7 @@ docker exec kafka kafka-console-consumer --bootstrap-server localhost:9092 --top
 
 ``````
 
-Démarrage du producer météo pour le topic: weather_streamDémarrage du producer météo pour le topic: weather_stream
-
-Envoi de 10 messages météo...Envoi de 10 messages météo...
-
-Message 1/10 envoyé - Paris: 16.5°CMessage 1/10 envoyé - Paris: 16.5°C
-
-  Partition: 0, Offset: 62  Partition: 0, Offset: 62
-
-Message 2/10 envoyé - Toulouse: 18.5°CMessage 2/10 envoyé - Toulouse: 18.5°C
-
-  Partition: 0, Offset: 63  Partition: 0, Offset: 63
-
-Message 3/10 envoyé - Paris: 16.5°CMessage 3/10 envoyé - Paris: 16.5°C
-
-  Partition: 0, Offset: 64  Partition: 0, Offset: 64
-
-Message 4/10 envoyé - Nice: 27.0°CMessage 4/10 envoyé - Nice: 27.0°C
-
-  Partition: 0, Offset: 65  Partition: 0, Offset: 65
-
-Message 5/10 envoyé - Paris: 16.5°CMessage 5/10 envoyé - Paris: 16.5°C
-
-  Partition: 0, Offset: 66  Partition: 0, Offset: 66
-
-Message 6/10 envoyé - Toulouse: 18.5°CMessage 6/10 envoyé - Toulouse: 18.5°C
-
-  Partition: 0, Offset: 67  Partition: 0, Offset: 67
-
-Message 7/10 envoyé - Marseille: 21.6°CMessage 7/10 envoyé - Marseille: 21.6°C
-
-  Partition: 0, Offset: 68  Partition: 0, Offset: 68
-
-Message 8/10 envoyé - Nice: 27.0°CMessage 8/10 envoyé - Nice: 27.0°C
-
-  Partition: 0, Offset: 69  Partition: 0, Offset: 69
-
-Message 9/10 envoyé - Marseille: 21.6°CMessage 9/10 envoyé - Marseille: 21.6°C
-
-  Partition: 0, Offset: 70  Partition: 0, Offset: 70
-
-Message 10/10 envoyé - Lyon: 17.3°CMessage 10/10 envoyé - Lyon: 17.3°C
-
-  Partition: 0, Offset: 71  Partition: 0, Offset: 71
-
-
-
-Tous les messages ont été envoyés!Tous les messages ont été envoyés!
+![Capture de l'exercice 2](exo4.png)
 
 ``````
 
@@ -139,31 +93,7 @@ Tous les messages ont été envoyés!Tous les messages ont été envoyés!
 ### Processeur d'alertes en temps réel### Processeur d'alertes en temps réel
 
 ``````
-
-OK Nice: 27.0°C, 20.0 m/sOK Nice: 27.0°C, 20.0 m/s
-
-   -> Alertes: Vent=level_2, Chaleur=level_1   -> Alertes: Vent=level_2, Chaleur=level_1
-
-OK Marseille: 21.6°C, 16.3 m/sOK Marseille: 21.6°C, 16.3 m/s
-
-   -> Alertes: Vent=level_1, Chaleur=level_0   -> Alertes: Vent=level_1, Chaleur=level_0
-
-OK Lyon: 17.3°C, 4.8 m/sOK Lyon: 17.3°C, 4.8 m/s
-
-   -> Alertes: Vent=level_0, Chaleur=level_0   -> Alertes: Vent=level_0, Chaleur=level_0
-
-OK Paris: 16.5°C, 17.9 m/sOK Paris: 16.5°C, 17.9 m/s
-
-   -> Alertes: Vent=level_1, Chaleur=level_0   -> Alertes: Vent=level_1, Chaleur=level_0
-
-OK Lyon: 17.3°C, 4.8 m/sOK Lyon: 17.3°C, 4.8 m/s
-
-   -> Alertes: Vent=level_0, Chaleur=level_0   -> Alertes: Vent=level_0, Chaleur=level_0
-
-OK Toulouse: 18.5°C, 12.6 m/sOK Toulouse: 18.5°C, 12.6 m/s
-
-   -> Alertes: Vent=level_1, Chaleur=level_0   -> Alertes: Vent=level_1, Chaleur=level_0
-
+![Capture de l'exercice 2](exo4_1.png)
 ``````
 
 
