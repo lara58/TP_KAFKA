@@ -5,6 +5,7 @@
 
 # Installation Kafka native (on utilise Docker)
 kafka_2.13-2.8.0/
+jars/
 
 # Logs Docker
 *.log
@@ -18,6 +19,10 @@ venv/
 .venv/
 __pycache__/
 *.pyc
+
+# Fichiers de demo et test temporaires
+demo_exercice5.py
+EXERCICE5_COMPLETE.md
 .env
 
 # IDE
