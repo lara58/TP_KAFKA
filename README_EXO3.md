@@ -56,8 +56,14 @@ python consumer.py weather_stream
 ```
 
 ## Captures d'écran
-- **exo3.png** : Capture du producer en action envoyant les messages météo
-- **exo3_consumer.png** : Capture du consumer recevant les messages du producer
+
+### Producer en action
+![Exercice 3 - Producer](exo3.png)
+*Capture du producer envoyant 10 messages météo vers le topic weather_stream*
+
+### Consumer recevant les messages
+![Exercice 3 - Consumer](exo3_consumer.png)
+*Capture du consumer (exercice 2) recevant les messages météo du producer*
 
 ## Sortie attendue du Producer
 ```
