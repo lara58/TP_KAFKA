@@ -1,25 +1,25 @@
-﻿# Exercice 2 : Consommateur Kafka en Python
+# Exercice 2 : Consommateur Kafka en Python
 
 ## Qu'est-ce qu'un consommateur Kafka ?
 
 Un **consommateur** Kafka est un programme qui lit les messages depuis un topic.
-- Il **s'abonne** ├á un ou plusieurs topics
+- Il **s'abonne** à un ou plusieurs topics
 - Il **lit les messages** en continu
-- Il **traite** les donn├®es re├ºues
+- Il **traite** les données reçues
 
-**R├┤le** : Le consommateur permet de r├®cup├®rer et traiter les donn├®es stock├®es dans Kafka en temps r├®el.
+**Rôle** : Le consommateur permet de récupérer et traiter les données stockées dans Kafka en temps réel.
 
 ## Description
-Script Python qui lit les messages depuis un topic Kafka pass├® en argument et les affiche en temps r├®el.
+Script Python qui lit les messages depuis un topic Kafka passé en argument et les affiche en temps réel.
 
 ## Comment fonctionne le script ?
 
-1. **V├®rifie l'argument** : Le script attend un nom de topic en param├¿tre
-2. **Se connecte ├á Kafka** : ├ëtablit la connexion sur localhost:9092  
+1. **Vérifie l'argument** : Le script attend un nom de topic en paramètre
+2. **Se connecte à Kafka** : Établit la connexion sur localhost:9092  
 3. **S'abonne au topic** : Utilise un groupe de consommateurs unique
-4. **Lit en boucle** : Poll toutes les secondes pour r├®cup├®rer les messages
+4. **Lit en boucle** : Poll toutes les secondes pour récupérer les messages
 5. **Affiche les messages** : Format "topic: key = X value = Y"
-6. **G├¿re l'arr├¬t** : Ctrl+C ferme proprement la connexion
+6. **Gère l'arrêt** : Ctrl+C ferme proprement la connexion
 
 ## Utilisation
 
@@ -33,12 +33,12 @@ python consumer.py <topic_name>
 python consumer.py weather_stream
 ```
 
-## R├®sultat de l'exercice 2
+## Résultat de l'exercice 2
 ![Capture de l'exercice 2](exo2.png)
 Le screenshot montre :
 - Le script consumer.py en action
 - Lecture des messages depuis le topic weather_stream
-- Affichage en temps r├®el des messages re├ºus
+- Affichage en temps réel des messages reçus
 
 
 
