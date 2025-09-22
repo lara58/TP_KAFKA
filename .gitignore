@@ -1,0 +1,25 @@
+# Fichiers volumineux
+*.tgz
+*.tar.gz
+*.zip
+
+# Installation Kafka native (on utilise Docker)
+kafka_2.13-2.8.0/
+
+# Logs Docker
+*.log
+
+# Fichiers temporaires
+.DS_Store
+Thumbs.db
+
+# Environnements Python (pour les prochains exercices)
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# IDE
+.vscode/
+.idea/
