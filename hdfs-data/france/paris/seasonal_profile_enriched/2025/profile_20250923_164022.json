@@ -1,0 +1,767 @@
+{
+  "city": "paris",
+  "country": "france",
+  "analysis_timestamp": "2025-09-23T16:17:34.627535",
+  "analysis_type": "seasonal_climatology",
+  "data_summary": {
+    "total_measurements": 99600,
+    "years_analyzed": 11,
+    "period": "2014-2024",
+    "years_list": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  "seasonal_profile": {
+    "1": {
+      "month_number": 1,
+      "month_name": "Janvier",
+      "measurements_count": 8448,
+      "temperature": {
+        "average": 5.01,
+        "min": -6.5,
+        "max": 15.5,
+        "median": 5.1,
+        "std": 4.191162155077885,
+        "min_observed": -6.5,
+        "max_observed": 15.5,
+        "q25": 1.8,
+        "q75": 8.2,
+        "iqr": 6.3999999999999995,
+        "anomaly_detection": {
+          "is_anomaly": false,
+          "method": "iqr",
+          "bounds": {
+            "lower": -7.8,
+            "upper": 17.799999999999997
+          },
+          "severity": "normal"
+        }
+      },
+      "wind_speed": {
+        "average": 14.85,
+        "max": 52.0
+      },
+      "precipitation": {
+        "average": 0.09,
+        "total": 733.3,
+        "max_daily": 4.5,
+        "median": 0.0,
+        "std": 0.28309063071030477,
+        "min_observed": 0.0,
+        "max_observed": 4.5,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0
+      },
+      "humidity": {
+        "average": 86.3
+      },
+      "alert_probabilities": {
+        "level_1_percent": 33.26,
+        "level_2_percent": 11.33,
+        "normal_percent": 55.41
+      },
+      "alert_counts": {
+        "level_1": 2810,
+        "level_2": 957,
+        "normal": 4681,
+        "total": 8448
+      }
+    },
+    "2": {
+      "month_number": 2,
+      "month_name": "Février",
+      "measurements_count": 7728,
+      "temperature": {
+        "average": 6.17,
+        "min": -9.9,
+        "max": 18.9,
+        "median": 6.7,
+        "std": 4.274560004488375,
+        "min_observed": -9.9,
+        "max_observed": 18.9,
+        "q25": 3.4,
+        "q75": 9.4,
+        "iqr": 6.0,
+        "anomaly_detection": {
+          "is_anomaly": false,
+          "method": "iqr",
+          "bounds": {
+            "lower": -5.6,
+            "upper": 18.4
+          },
+          "severity": "normal"
+        }
+      },
+      "wind_speed": {
+        "average": 15.92,
+        "max": 49.1
+      },
+      "precipitation": {
+        "average": 0.08,
+        "total": 646.6,
+        "max_daily": 4.1,
+        "median": 0.0,
+        "std": 0.2660592888235561,
+        "min_observed": 0.0,
+        "max_observed": 3.2,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0
+      },
+      "humidity": {
+        "average": 80.32
+      },
+      "alert_probabilities": {
+        "level_1_percent": 37.88,
+        "level_2_percent": 12.68,
+        "normal_percent": 49.44
+      },
+      "alert_counts": {
+        "level_1": 2927,
+        "level_2": 980,
+        "normal": 3821,
+        "total": 7728
+      }
+    },
+    "3": {
+      "month_number": 3,
+      "month_name": "Mars",
+      "measurements_count": 8448,
+      "temperature": {
+        "average": 8.26,
+        "min": -3.2,
+        "max": 23.7,
+        "median": 8.0,
+        "std": 4.06872864974837,
+        "min_observed": -3.2,
+        "max_observed": 23.7,
+        "q25": 5.4,
+        "q75": 10.8,
+        "iqr": 5.4,
+        "anomaly_detection": {
+          "is_anomaly": false,
+          "method": "iqr",
+          "bounds": {
+            "lower": -2.700000000000001,
+            "upper": 18.900000000000002
+          },
+          "severity": "normal"
+        }
+      },
+      "wind_speed": {
+        "average": 14.36,
+        "max": 44.5
+      },
+      "precipitation": {
+        "average": 0.09,
+        "total": 728.5,
+        "max_daily": 6.9,
+        "median": 0.0,
+        "std": 0.31837671143228685,
+        "min_observed": 0.0,
+        "max_observed": 6.9,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0
+      },
+      "humidity": {
+        "average": 76.48
+      },
+      "alert_probabilities": {
+        "level_1_percent": 30.74,
+        "level_2_percent": 9.67,
+        "normal_percent": 59.59
+      },
+      "alert_counts": {
+        "level_1": 2597,
+        "level_2": 817,
+        "normal": 5034,
+        "total": 8448
+      }
+    },
+    "4": {
+      "month_number": 4,
+      "month_name": "Avril",
+      "measurements_count": 8184,
+      "temperature": {
+        "average": 10.96,
+        "min": -1.9,
+        "max": 26.8,
+        "median": 10.6,
+        "std": 4.770584047721994,
+        "min_observed": -1.9,
+        "max_observed": 26.8,
+        "q25": 7.7,
+        "q75": 13.9,
+        "iqr": 6.2,
+        "anomaly_detection": {
+          "is_anomaly": false,
+          "method": "iqr",
+          "bounds": {
+            "lower": -1.6000000000000005,
+            "upper": 23.200000000000003
+          },
+          "severity": "normal"
+        }
+      },
+      "wind_speed": {
+        "average": 12.26,
+        "max": 42.2
+      },
+      "precipitation": {
+        "average": 0.07,
+        "total": 599.9,
+        "max_daily": 5.1,
+        "median": 0.0,
+        "std": 0.28084269526173844,
+        "min_observed": 0.0,
+        "max_observed": 5.1,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0
+      },
+      "humidity": {
+        "average": 71.24
+      },
+      "alert_probabilities": {
+        "level_1_percent": 24.69,
+        "level_2_percent": 3.29,
+        "normal_percent": 72.02
+      },
+      "alert_counts": {
+        "level_1": 2021,
+        "level_2": 269,
+        "normal": 5894,
+        "total": 8184
+      }
+    },
+    "5": {
+      "month_number": 5,
+      "month_name": "Mai",
+      "measurements_count": 8448,
+      "temperature": {
+        "average": 14.58,
+        "min": 2.0,
+        "max": 30.6,
+        "median": 14.1,
+        "std": 4.532350936330499,
+        "min_observed": 2.0,
+        "max_observed": 30.6,
+        "q25": 11.2,
+        "q75": 17.2,
+        "iqr": 6.0,
+        "anomaly_detection": {
+          "is_anomaly": false,
+          "method": "iqr",
+          "bounds": {
+            "lower": 2.1999999999999993,
+            "upper": 26.2
+          },
+          "severity": "normal"
+        }
+      },
+      "wind_speed": {
+        "average": 12.16,
+        "max": 36.5
+      },
+      "precipitation": {
+        "average": 0.11,
+        "total": 907.1,
+        "max_daily": 6.6,
+        "median": 0.0,
+        "std": 0.3966400689252988,
+        "min_observed": 0.0,
+        "max_observed": 6.6,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0
+      },
+      "humidity": {
+        "average": 72.12
+      },
+      "alert_probabilities": {
+        "level_1_percent": 24.92,
+        "level_2_percent": 2.43,
+        "normal_percent": 72.66
+      },
+      "alert_counts": {
+        "level_1": 2105,
+        "level_2": 205,
+        "normal": 6138,
+        "total": 8448
+      }
+    },
+    "6": {
+      "month_number": 6,
+      "month_name": "Juin",
+      "measurements_count": 8184,
+      "temperature": {
+        "average": 18.69,
+        "min": 6.6,
+        "max": 37.1,
+        "median": 18.1,
+        "std": 4.698659857913077,
+        "min_observed": 6.6,
+        "max_observed": 36.1,
+        "q25": 15.2,
+        "q75": 21.5,
+        "iqr": 6.300000000000001,
+        "anomaly_detection": {
+          "is_anomaly": false,
+          "method": "iqr",
+          "bounds": {
+            "lower": 5.749999999999998,
+            "upper": 30.950000000000003
+          },
+          "severity": "normal"
+        }
+      },
+      "wind_speed": {
+        "average": 11.25,
+        "max": 42.0
+      },
+      "precipitation": {
+        "average": 0.1,
+        "total": 817.7,
+        "max_daily": 15.4,
+        "median": 0.0,
+        "std": 0.4823022385920491,
+        "min_observed": 0.0,
+        "max_observed": 15.4,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0
+      },
+      "humidity": {
+        "average": 69.57
+      },
+      "alert_probabilities": {
+        "level_1_percent": 20.3,
+        "level_2_percent": 1.42,
+        "normal_percent": 78.29
+      },
+      "alert_counts": {
+        "level_1": 1661,
+        "level_2": 116,
+        "normal": 6407,
+        "total": 8184
+      }
+    },
+    "7": {
+      "month_number": 7,
+      "month_name": "Juillet",
+      "measurements_count": 8448,
+      "temperature": {
+        "average": 20.68,
+        "min": 8.5,
+        "max": 40.9,
+        "median": 20.1,
+        "std": 4.622902338279393,
+        "min_observed": 8.5,
+        "max_observed": 40.9,
+        "q25": 17.3,
+        "q75": 23.5,
+        "iqr": 6.199999999999999,
+        "anomaly_detection": {
+          "is_anomaly": false,
+          "method": "iqr",
+          "bounds": {
+            "lower": 8.000000000000002,
+            "upper": 32.8
+          },
+          "severity": "normal"
+        }
+      },
+      "wind_speed": {
+        "average": 11.35,
+        "max": 34.8
+      },
+      "precipitation": {
+        "average": 0.07,
+        "total": 614.8,
+        "max_daily": 9.9,
+        "median": 0.0,
+        "std": 0.3381285107311638,
+        "min_observed": 0.0,
+        "max_observed": 7.1,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0
+      },
+      "humidity": {
+        "average": 64.67
+      },
+      "alert_probabilities": {
+        "level_1_percent": 21.44,
+        "level_2_percent": 1.75,
+        "normal_percent": 76.81
+      },
+      "alert_counts": {
+        "level_1": 1811,
+        "level_2": 148,
+        "normal": 6489,
+        "total": 8448
+      }
+    },
+    "8": {
+      "month_number": 8,
+      "month_name": "Août",
+      "measurements_count": 8448,
+      "temperature": {
+        "average": 20.2,
+        "min": 7.4,
+        "max": 37.6,
+        "median": 19.7,
+        "std": 4.636605254337493,
+        "min_observed": 7.4,
+        "max_observed": 37.6,
+        "q25": 17.0,
+        "q75": 23.1,
+        "iqr": 6.100000000000001,
+        "anomaly_detection": {
+          "is_anomaly": false,
+          "method": "iqr",
+          "bounds": {
+            "lower": 7.849999999999998,
+            "upper": 32.25
+          },
+          "severity": "normal"
+        }
+      },
+      "wind_speed": {
+        "average": 10.83,
+        "max": 44.3
+      },
+      "precipitation": {
+        "average": 0.09,
+        "total": 789.2,
+        "max_daily": 13.3,
+        "median": 0.0,
+        "std": 0.525792475664619,
+        "min_observed": 0.0,
+        "max_observed": 13.3,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0
+      },
+      "humidity": {
+        "average": 67.37
+      },
+      "alert_probabilities": {
+        "level_1_percent": 17.58,
+        "level_2_percent": 1.82,
+        "normal_percent": 80.6
+      },
+      "alert_counts": {
+        "level_1": 1485,
+        "level_2": 154,
+        "normal": 6809,
+        "total": 8448
+      }
+    },
+    "9": {
+      "month_number": 9,
+      "month_name": "Septembre",
+      "measurements_count": 8184,
+      "temperature": {
+        "average": 17.12,
+        "min": 4.7,
+        "max": 34.0,
+        "median": 17.0,
+        "std": 4.574648082277678,
+        "min_observed": 4.7,
+        "max_observed": 34.0,
+        "q25": 14.1,
+        "q75": 20.0,
+        "iqr": 5.9,
+        "anomaly_detection": {
+          "is_anomaly": false,
+          "method": "iqr",
+          "bounds": {
+            "lower": 5.249999999999998,
+            "upper": 28.85
+          },
+          "severity": "normal"
+        }
+      },
+      "wind_speed": {
+        "average": 11.31,
+        "max": 44.3
+      },
+      "precipitation": {
+        "average": 0.08,
+        "total": 643.1,
+        "max_daily": 7.4,
+        "median": 0.0,
+        "std": 0.36774846856833354,
+        "min_observed": 0.0,
+        "max_observed": 7.4,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0
+      },
+      "humidity": {
+        "average": 72.26
+      },
+      "alert_probabilities": {
+        "level_1_percent": 20.69,
+        "level_2_percent": 3.01,
+        "normal_percent": 76.31
+      },
+      "alert_counts": {
+        "level_1": 1693,
+        "level_2": 246,
+        "normal": 6245,
+        "total": 8184
+      }
+    },
+    "10": {
+      "month_number": 10,
+      "month_name": "Octobre",
+      "measurements_count": 8448,
+      "temperature": {
+        "average": 13.28,
+        "min": 2.2,
+        "max": 27.3,
+        "median": 13.4,
+        "std": 3.856628039865867,
+        "min_observed": 2.2,
+        "max_observed": 27.3,
+        "q25": 10.9,
+        "q75": 15.7,
+        "iqr": 4.799999999999999,
+        "anomaly_detection": {
+          "is_anomaly": false,
+          "method": "iqr",
+          "bounds": {
+            "lower": 3.700000000000002,
+            "upper": 22.9
+          },
+          "severity": "normal"
+        }
+      },
+      "wind_speed": {
+        "average": 12.64,
+        "max": 50.7
+      },
+      "precipitation": {
+        "average": 0.09,
+        "total": 791.5,
+        "max_daily": 8.3,
+        "median": 0.0,
+        "std": 0.3735906705325385,
+        "min_observed": 0.0,
+        "max_observed": 8.3,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0
+      },
+      "humidity": {
+        "average": 80.91
+      },
+      "alert_probabilities": {
+        "level_1_percent": 26.83,
+        "level_2_percent": 4.58,
+        "normal_percent": 68.58
+      },
+      "alert_counts": {
+        "level_1": 2267,
+        "level_2": 387,
+        "normal": 5794,
+        "total": 8448
+      }
+    },
+    "11": {
+      "month_number": 11,
+      "month_name": "Novembre",
+      "measurements_count": 8184,
+      "temperature": {
+        "average": 8.54,
+        "min": -3.7,
+        "max": 20.8,
+        "median": 8.9,
+        "std": 3.7544743889141787,
+        "min_observed": -3.7,
+        "max_observed": 20.8,
+        "q25": 6.275,
+        "q75": 11.3,
+        "iqr": 5.025,
+        "anomaly_detection": {
+          "is_anomaly": false,
+          "method": "iqr",
+          "bounds": {
+            "lower": -1.2625000000000002,
+            "upper": 18.837500000000002
+          },
+          "severity": "normal"
+        }
+      },
+      "wind_speed": {
+        "average": 13.66,
+        "max": 47.3
+      },
+      "precipitation": {
+        "average": 0.09,
+        "total": 736.3,
+        "max_daily": 9.6,
+        "median": 0.0,
+        "std": 0.3483555879762673,
+        "min_observed": 0.0,
+        "max_observed": 9.6,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0
+      },
+      "humidity": {
+        "average": 85.73
+      },
+      "alert_probabilities": {
+        "level_1_percent": 31.46,
+        "level_2_percent": 7.2,
+        "normal_percent": 61.34
+      },
+      "alert_counts": {
+        "level_1": 2575,
+        "level_2": 589,
+        "normal": 5020,
+        "total": 8184
+      }
+    },
+    "12": {
+      "month_number": 12,
+      "month_name": "Décembre",
+      "measurements_count": 8448,
+      "temperature": {
+        "average": 6.21,
+        "min": -5.3,
+        "max": 16.2,
+        "median": 6.4,
+        "std": 4.04879907645949,
+        "min_observed": -5.3,
+        "max_observed": 16.2,
+        "q25": 3.4,
+        "q75": 9.3,
+        "iqr": 5.9,
+        "anomaly_detection": {
+          "is_anomaly": false,
+          "method": "iqr",
+          "bounds": {
+            "lower": -5.450000000000001,
+            "upper": 18.150000000000002
+          },
+          "severity": "normal"
+        }
+      },
+      "wind_speed": {
+        "average": 14.59,
+        "max": 46.2
+      },
+      "precipitation": {
+        "average": 0.1,
+        "total": 828.4,
+        "max_daily": 8.7,
+        "median": 0.0,
+        "std": 0.38128331580670555,
+        "min_observed": 0.0,
+        "max_observed": 8.7,
+        "q25": 0.0,
+        "q75": 0.0,
+        "iqr": 0.0
+      },
+      "humidity": {
+        "average": 87.99
+      },
+      "alert_probabilities": {
+        "level_1_percent": 32.2,
+        "level_2_percent": 10.11,
+        "normal_percent": 57.69
+      },
+      "alert_counts": {
+        "level_1": 2720,
+        "level_2": 854,
+        "normal": 4874,
+        "total": 8448
+      }
+    }
+  },
+  "annual_statistics": {
+    "temperature": {
+      "annual_average": 12.51,
+      "absolute_min": -9.9,
+      "absolute_max": 40.9,
+      "range": 50.8
+    },
+    "wind_speed": {
+      "annual_average": 12.92,
+      "max_recorded": 52.0
+    },
+    "precipitation": {
+      "annual_total": 8836.4,
+      "annual_average": 0.0887,
+      "max_hourly": 15.4
+    },
+    "alert_statistics": {
+      "total_measurements": 99600,
+      "level_1_count": 26672,
+      "level_2_count": 5722,
+      "normal_count": 67206,
+      "level_1_percent": 26.78,
+      "level_2_percent": 5.74
+    }
+  },
+  "climate_summary": {
+    "hottest_month": {
+      "name": "Juillet",
+      "average_temperature": 20.68
+    },
+    "coldest_month": {
+      "name": "Janvier",
+      "average_temperature": 5.01
+    },
+    "windiest_month": {
+      "name": "Février",
+      "average_wind_speed": 15.92
+    },
+    "rainiest_month": {
+      "name": "Mai",
+      "total_precipitation": 907.1
+    },
+    "most_alerts_month": {
+      "name": "Février",
+      "alert_probability": 50.56
+    },
+    "seasonal_patterns": {
+      "temperature_range": 15.67,
+      "months_with_data": 12
+    }
+  },
+  "message_type": "seasonal_climatology",
+  "emission_timestamp": "2025-09-23T16:17:34.673547",
+  "source": "urban_climatology_analyzer_simulation",
+  "enrichment_timestamp": "2025-09-23T16:40:22.241295",
+  "enrichment_version": "1.0",
+  "validation_results": {
+    "completeness": {
+      "is_complete": true,
+      "missing_months": [],
+      "issues": []
+    },
+    "realism": {
+      "is_realistic": true,
+      "unrealistic_values": [],
+      "issues": []
+    },
+    "validation_timestamp": "2025-09-23T16:40:22.329811"
+  }
+}
