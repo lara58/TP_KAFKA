@@ -1,0 +1,42 @@
+{
+  "message_type": "global_climatology_summary",
+  "emission_timestamp": "2025-09-23T16:17:34.774994",
+  "source": "urban_climatology_analyzer_simulation",
+  "analysis_summary": {
+    "total_cities_analyzed": 1,
+    "countries": [
+      "france"
+    ],
+    "total_measurements": 99600,
+    "analysis_period": {
+      "start_year": 2014,
+      "end_year": 2024
+    }
+  },
+  "global_climate_extremes": {
+    "hottest_monthly_average": {
+      "temperature": 20.68,
+      "city": "paris",
+      "country": "france"
+    },
+    "coldest_monthly_average": {
+      "temperature": 5.01,
+      "city": "paris",
+      "country": "france"
+    },
+    "windiest_monthly_average": {
+      "wind_speed": 15.92,
+      "city": "paris",
+      "country": "france"
+    }
+  },
+  "global_averages": {
+    "temperature": 12.47,
+    "wind_speed": 12.93,
+    "monthly_precipitation": 736.37
+  },
+  "climate_patterns": {
+    "temperature_variability": 15.67,
+    "cities_with_extreme_alerts": 1
+  }
+}

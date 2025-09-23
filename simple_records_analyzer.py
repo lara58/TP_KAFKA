@@ -280,20 +280,20 @@ def main():
                 wind = records["wind_records"]
                 rain = records["precipitation_records"]
                 
-                print(f"📊 Période analysée: {records['data_summary']['period_start']} "
+                print(f"[ANALYSE] Période analysée: {records['data_summary']['period_start']} "
                       f"à {records['data_summary']['period_end']}")
-                print(f"📈 Mesures totales: {records['data_summary']['total_measurements']:,}")
-                print(f"🌡️  Jour le plus chaud: {temp['hottest_day']['temperature']:.1f}°C "
+                print(f"[DONNÉES] Mesures totales: {records['data_summary']['total_measurements']:,}")
+                print(f"[TEMPÉRATURE] Jour le plus chaud: {temp['hottest_day']['temperature']:.1f}°C "
                       f"le {temp['hottest_day']['date']}")
-                print(f"🥶 Jour le plus froid: {temp['coldest_day']['temperature']:.1f}°C "
+                print(f"[TEMPÉRATURE] Jour le plus froid: {temp['coldest_day']['temperature']:.1f}°C "
                       f"le {temp['coldest_day']['date']}")
-                print(f"💨 Vent le plus fort: {wind['strongest_wind']['wind_speed']:.1f} m/s "
+                print(f"[VENT] Vent le plus fort: {wind['strongest_wind']['wind_speed']:.1f} m/s "
                       f"({wind['strongest_wind']['wind_speed_kmh']:.1f} km/h) "
                       f"le {wind['strongest_wind']['date']}")
-                print(f"🌧️  Jour le plus pluvieux: {rain['rainiest_day']['precipitation']:.1f} mm "
+                print(f"[PRÉCIPITATIONS] Jour le plus pluvieux: {rain['rainiest_day']['precipitation']:.1f} mm "
                       f"le {rain['rainiest_day']['date']}")
         
-        print(f"\n✅ Analyse terminée pour {len(all_records)} villes")
+        print(f"\n[SUCCÈS] Analyse terminée pour {len(all_records)} villes")
         return all_records
         
     except Exception as e:

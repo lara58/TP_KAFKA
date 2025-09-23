@@ -142,11 +142,11 @@ class SimpleWeatherRecordsProducer:
             # Afficher synthèse
             print("\nSYNTHÈSE GLOBALE DES RECORDS")
             print("=" * 60)
-            print(f"🌍 {total_cities} villes analysées dans {len(countries)} pays")
-            print(f"📊 {summary['analysis_summary']['total_measurements']:,} mesures totales")
-            print(f"🔥 Record de chaleur: {global_hottest:.1f}°C à {hottest_city_data['city'].title()}")
-            print(f"🥶 Record de froid: {global_coldest:.1f}°C à {coldest_city_data['city'].title()}")
-            print(f"💨 Record de vent: {global_strongest_wind:.1f} m/s à {windiest_city_data['city'].title()}")
+            print(f"[GLOBAL] {total_cities} villes analysées dans {len(countries)} pays")
+            print(f"[DONNÉES] {summary['analysis_summary']['total_measurements']:,} mesures totales")
+            print(f"[CHALEUR] Record de chaleur: {global_hottest:.1f}°C à {hottest_city_data['city'].title()}")
+            print(f"[FROID] Record de froid: {global_coldest:.1f}°C à {coldest_city_data['city'].title()}")
+            print(f"[VENT] Record de vent: {global_strongest_wind:.1f} m/s à {windiest_city_data['city'].title()}")
             
             return True
             
@@ -185,11 +185,11 @@ class SimpleWeatherRecordsConsumer:
             wind = city_records["wind_records"]
             
             print(f"\n📁 Sauvegardé: {city.title()}, {country.title()}")
-            print(f"   🌡️  Max: {temp['hottest_day']['temperature']:.1f}°C "
+            print(f"   [TEMPÉRATURE]  Max: {temp['hottest_day']['temperature']:.1f}°C "
                   f"({temp['hottest_day']['date']})")
-            print(f"   🥶 Min: {temp['coldest_day']['temperature']:.1f}°C "
+            print(f"   [FROID] Min: {temp['coldest_day']['temperature']:.1f}°C "
                   f"({temp['coldest_day']['date']})")
-            print(f"   💨 Vent: {wind['strongest_wind']['wind_speed']:.1f} m/s "
+            print(f"   [VENT] Vent: {wind['strongest_wind']['wind_speed']:.1f} m/s "
                   f"({wind['strongest_wind']['date']})")
             print(f"   📂 {filename}")
             
@@ -217,15 +217,15 @@ class SimpleWeatherRecordsConsumer:
             analysis = summary["analysis_summary"]
             records = summary["global_records"]
             
-            print(f"\n📊 SYNTHÈSE GLOBALE SAUVEGARDÉE")
-            print(f"   🌍 {analysis['total_cities_analyzed']} villes, "
+            print(f"\n[DONNÉES] SYNTHÈSE GLOBALE SAUVEGARDÉE")
+            print(f"   [GLOBAL] {analysis['total_cities_analyzed']} villes, "
                   f"{len(analysis['countries'])} pays")
-            print(f"   📈 {analysis['total_measurements']:,} mesures totales")
-            print(f"   🔥 Record chaleur: {records['hottest_temperature']['value']:.1f}°C "
+            print(f"   [STATISTIQUES] {analysis['total_measurements']:,} mesures totales")
+            print(f"   [CHALEUR] Record chaleur: {records['hottest_temperature']['value']:.1f}°C "
                   f"à {records['hottest_temperature']['city'].title()}")
-            print(f"   🥶 Record froid: {records['coldest_temperature']['value']:.1f}°C "
+            print(f"   [FROID] Record froid: {records['coldest_temperature']['value']:.1f}°C "
                   f"à {records['coldest_temperature']['city'].title()}")
-            print(f"   💨 Record vent: {records['strongest_wind']['value']:.1f} m/s "
+            print(f"   [VENT] Record vent: {records['strongest_wind']['value']:.1f} m/s "
                   f"à {records['strongest_wind']['city'].title()}")
             print(f"   📂 {filename}")
             
@@ -253,9 +253,9 @@ class SimpleWeatherRecordsConsumer:
                     
                     if success:
                         self.records_processed += 1
-                        print(f"✅ Message traité (Offset: {message.offset})")
+                        print(f"[SUCCÈS] Message traité (Offset: {message.offset})")
                     else:
-                        print(f"❌ Échec traitement (Offset: {message.offset})")
+                        print(f"[ERREUR] Échec traitement (Offset: {message.offset})")
                 
                 self.message_queue.task_done()
                 
@@ -265,12 +265,12 @@ class SimpleWeatherRecordsConsumer:
 
 def producer_thread(analyzer, producer, cities):
     """Thread producteur pour l'analyse et l'émission"""
-    print("🔄 Thread Producteur : Analyse des records et émission")
+    print("[PROCESS] Thread Producteur : Analyse des records et émission")
     
     all_records = []
     
     for country, city in cities:
-        print(f"\n🔍 Analyse: {city.title()}, {country.title()}")
+        print(f"\n[ANALYSE] Analyse: {city.title()}, {country.title()}")
         
         records = analyzer.analyze_city_records(country, city)
         if records:
@@ -285,16 +285,16 @@ def producer_thread(analyzer, producer, cities):
         print(f"\n📤 Émission synthèse globale...")
         producer.send_summary_record(all_records)
     
-    print(f"\n✅ Producteur terminé : {len(all_records)} villes traitées")
+    print(f"\n[SUCCÈS] Producteur terminé : {len(all_records)} villes traitées")
 
 def consumer_thread(consumer):
     """Thread consumer pour la sauvegarde"""
-    print("🔄 Thread Consumer : Traitement et sauvegarde")
+    print("[PROCESS] Thread Consumer : Traitement et sauvegarde")
     
     time.sleep(2)  # Attendre le producteur
     consumer.process_messages()
     
-    print(f"\n✅ Consumer terminé : {consumer.records_processed} messages traités")
+    print(f"\n[SUCCÈS] Consumer terminé : {consumer.records_processed} messages traités")
 
 def run_simple_simulation():
     """Lance la simulation simplifiée de l'exercice 10"""
@@ -305,27 +305,27 @@ def run_simple_simulation():
     
     try:
         # Initialiser l'analyseur
-        print("\n1️⃣  Initialisation de l'analyseur...")
+        print("\n[1]  Initialisation de l'analyseur...")
         analyzer = WeatherRecordsAnalyzer()
         
         # Trouver les villes
         cities = analyzer.find_all_cities()
         if not cities:
-            print("❌ Aucune ville trouvée avec des données météo")
+            print("[ERREUR] Aucune ville trouvée avec des données météo")
             return
         
-        print(f"✅ {len(cities)} villes trouvées : {cities}")
+        print(f"[SUCCÈS] {len(cities)} villes trouvées : {cities}")
         
         # Initialiser la queue de messages
         message_queue = Queue()
         
         # Initialiser producteur et consumer simulés
-        print("\n2️⃣  Initialisation des composants simulés...")
+        print("\n[2]  Initialisation des composants simulés...")
         producer = SimpleWeatherRecordsProducer(message_queue)
         consumer = SimpleWeatherRecordsConsumer(message_queue)
         
         # Lancer les threads
-        print("\n3️⃣  Lancement de l'analyse et du traitement...")
+        print("\n[3]  Lancement de l'analyse et du traitement...")
         
         producer_t = Thread(
             target=producer_thread,
@@ -348,7 +348,7 @@ def run_simple_simulation():
         consumer_t.join()
         
         # Statistiques finales
-        print(f"\n📊 RÉSULTATS DE LA SIMULATION")
+        print(f"\n[DONNÉES] RÉSULTATS DE LA SIMULATION")
         print("=" * 50)
         print(f"🏙️  Villes analysées: {len(cities)}")
         print(f"📤 Messages émis: {producer.messages_sent}")
@@ -372,7 +372,7 @@ def run_simple_simulation():
         
     except Exception as e:
         logger.error(f"Erreur simulation: {e}")
-        print(f"❌ Erreur: {e}")
+        print(f"[ERREUR] Erreur: {e}")
         raise
 
 def main():
@@ -382,7 +382,7 @@ def main():
     except KeyboardInterrupt:
         print("\n⏹️  Simulation interrompue par l'utilisateur")
     except Exception as e:
-        print(f"\n❌ Erreur fatale: {e}")
+        print(f"\n[ERREUR] Erreur fatale: {e}")
 
 if __name__ == "__main__":
     main()
