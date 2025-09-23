@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Producer Kafka pour l'exercice 3
-Envoie des données météo vers un topic Kafka
+Producer Kafka pour l'exercice 6
+Envoie des données météo géolocalisées vers un topic Kafka
+Accepte ville et pays en arguments
 """
 
 import json
@@ -10,42 +11,65 @@ import sys
 import requests
 from kafka import KafkaProducer
 from datetime import datetime
-from random import choice
 
-def get_weather_data(city="Paris"):
+def get_coordinates(city, country=None):
     """
-    Récupère les données météo pour une ville donnée
-    Utilise l'API Open-Meteo avec des coordonnées prédéfinies
+    Récupère les coordonnées géographiques d'une ville via l'API Geocoding
     """
-    # Coordonnées de quelques villes françaises
-    cities = {
-        "Paris": {"lat": 48.8566, "lon": 2.3522},
-        "Lyon": {"lat": 45.7640, "lon": 4.8357},
-        "Marseille": {"lat": 43.2965, "lon": 5.3698},
-        "Toulouse": {"lat": 43.6047, "lon": 1.4442},
-        "Nice": {"lat": 43.7102, "lon": 7.2620}
-    }
-    
-    if city not in cities:
-        city = "Paris"  # Valeur par défaut
-    
     try:
-        lat, lon = cities[city]["lat"], cities[city]["lon"]
+        url = "https://geocoding-api.open-meteo.com/v1/search"
+        params = {
+            "name": city,
+            "count": 1,
+            "language": "en",
+            "format": "json"
+        }
+        
+        if country:
+            params["country"] = country
+            
+        response = requests.get(url, params=params, timeout=5)
+        response.raise_for_status()
+        data = response.json()
+        
+        if not data.get("results"):
+            raise ValueError(f"Ville '{city}' non trouvée")
+            
+        result = data["results"][0]
+        return {
+            "latitude": result["latitude"],
+            "longitude": result["longitude"], 
+            "country": result["country"],
+            "city": result["name"]
+        }
+        
+    except Exception as e:
+        print(f"Erreur géocodage: {e}")
+        raise
+
+def get_weather_data(latitude, longitude, city, country):
+    """
+    Récupère les données météo pour des coordonnées données
+    """
+    try:
         url = "https://api.open-meteo.com/v1/forecast"
         params = {
-            "latitude": lat,
-            "longitude": lon,
+            "latitude": latitude,
+            "longitude": longitude,
             "current": "temperature_2m,relative_humidity_2m,wind_speed_10m",
-            "timezone": "Europe/Paris"
+            "timezone": "auto"
         }
         
         response = requests.get(url, params=params, timeout=5)
         response.raise_for_status()
         data = response.json()
         
-        # Formatage simple des données
+        # Formatage des données enrichies
         weather_data = {
             "city": city,
+            "country": country,
+            "latitude": latitude,
+            "longitude": longitude,
             "timestamp": datetime.now().isoformat(),
             "temperature": data["current"]["temperature_2m"],
             "humidity": data["current"]["relative_humidity_2m"],
@@ -57,26 +81,46 @@ def get_weather_data(city="Paris"):
     except Exception as e:
         print(f"Erreur API météo: {e}")
         # Données simulées en cas d'erreur
+        import random
         return {
             "city": city,
+            "country": country,
+            "latitude": latitude,
+            "longitude": longitude,
             "timestamp": datetime.now().isoformat(),
-            "temperature": choice(range(10, 25)),
-            "humidity": choice(range(40, 80)),
-            "wind_speed": choice(range(5, 20))
+            "temperature": random.randint(10, 25),
+            "humidity": random.randint(40, 80),
+            "wind_speed": random.randint(5, 20)
         }
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: python producer.py <topic_name>")
-        print("Exemple: python producer.py weather_stream")
+    # Vérification des arguments
+    if len(sys.argv) < 3:
+        print("Usage: python producer.py <topic_name> <city> [country]")
+        print("Exemples:")
+        print("  python producer.py weather_stream Paris France")
+        print("  python producer.py weather_stream Tokyo Japan")
+        print("  python producer.py weather_stream Berlin")
         sys.exit(1)
     
     topic_name = sys.argv[1]
+    city = sys.argv[2]
+    country = sys.argv[3] if len(sys.argv) > 3 else None
     
     print(f"Démarrage du producer météo pour le topic: {topic_name}")
-    print("Envoi de 10 messages météo...")
+    print(f"Ville: {city}" + (f", Pays: {country}" if country else ""))
     
-    # Configuration du producer (similaire au consumer)
+    # Étape 1: Géocodage
+    try:
+        print("Récupération des coordonnées...")
+        coords = get_coordinates(city, country)
+        print(f"Coordonnées trouvées: {coords['city']}, {coords['country']}")
+        print(f"Latitude: {coords['latitude']}, Longitude: {coords['longitude']}")
+    except Exception as e:
+        print(f"Erreur lors du géocodage: {e}")
+        sys.exit(1)
+    
+    # Configuration du producer
     try:
         producer = KafkaProducer(
             bootstrap_servers=['localhost:9092'],
@@ -87,15 +131,17 @@ def main():
         print("Assurez-vous que Kafka est démarré (docker-compose up)")
         sys.exit(1)
     
+    print("Envoi de 10 messages météo...")
+    
     try:
-        cities = ["Paris", "Lyon", "Marseille", "Toulouse", "Nice"]
-        
         for i in range(10):
-            # Choisir une ville aléatoirement
-            city = choice(cities)
-            
             # Récupérer les données météo
-            weather_data = get_weather_data(city)
+            weather_data = get_weather_data(
+                coords['latitude'], 
+                coords['longitude'],
+                coords['city'], 
+                coords['country']
+            )
             weather_data["message_id"] = i + 1
             
             # Envoyer le message
@@ -104,7 +150,7 @@ def main():
             # Attendre la confirmation
             try:
                 record_metadata = future.get(timeout=10)
-                print(f"Message {i+1}/10 envoyé - {city}: {weather_data['temperature']}°C")
+                print(f"Message {i+1}/10 envoyé - {coords['city']}: {weather_data['temperature']}°C")
                 print(f"  Partition: {record_metadata.partition}, Offset: {record_metadata.offset}")
             except Exception as e:
                 print(f"Erreur envoi message {i+1}: {e}")
@@ -122,9 +168,6 @@ def main():
         print(f"Erreur: {e}")
     finally:
         producer.close()
-
-if __name__ == "__main__":
-    main()
 
 if __name__ == "__main__":
     main()
