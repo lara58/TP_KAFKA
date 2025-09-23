@@ -1,0 +1,35 @@
+{
+  "location": {
+    "city": "Singapore",
+    "country": "Singapore",
+    "latitude": 1.3521,
+    "longitude": 103.8198
+  },
+  "weather_data": {
+    "temperature": 30.0,
+    "humidity": 95,
+    "wind_speed": 10
+  },
+  "alerts": [
+    {
+      "type": "HUMIDITY_HIGH",
+      "severity": "MEDIUM",
+      "message": "Humidité très élevée: 95%",
+      "threshold": 85.0,
+      "value": 95
+    }
+  ],
+  "alert_summary": {
+    "count": 1,
+    "max_severity": "MEDIUM"
+  },
+  "timestamps": {
+    "original": "2025-09-23T11:26:02.424186",
+    "transformed": "2025-09-23T11:26:02.560393",
+    "saved_to_hdfs": "2025-09-23T11:26:02.565896"
+  },
+  "hdfs_info": {
+    "path": "./hdfs-data\\singapore\\singapore",
+    "filename": "alerts_20250923_112602.json"
+  }
+}

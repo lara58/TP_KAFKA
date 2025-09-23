@@ -1,0 +1,35 @@
+{
+  "location": {
+    "city": "Yakutsk",
+    "country": "Russia",
+    "latitude": 62.0341,
+    "longitude": 129.6752
+  },
+  "weather_data": {
+    "temperature": -25.3,
+    "humidity": 75,
+    "wind_speed": 20
+  },
+  "alerts": [
+    {
+      "type": "TEMPERATURE_LOW",
+      "severity": "HIGH",
+      "message": "Température très basse: -25.3°C",
+      "threshold": -10.0,
+      "value": -25.3
+    }
+  ],
+  "alert_summary": {
+    "count": 1,
+    "max_severity": "HIGH"
+  },
+  "timestamps": {
+    "original": "2025-09-23T11:26:02.424183",
+    "transformed": "2025-09-23T11:26:02.556616",
+    "saved_to_hdfs": "2025-09-23T11:26:02.561283"
+  },
+  "hdfs_info": {
+    "path": "./hdfs-data\\russia\\yakutsk",
+    "filename": "alerts_20250923_112602.json"
+  }
+}

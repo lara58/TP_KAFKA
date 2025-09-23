@@ -1,0 +1,35 @@
+{
+  "location": {
+    "city": "Dubai",
+    "country": "UAE",
+    "latitude": 25.2048,
+    "longitude": 55.2708
+  },
+  "weather_data": {
+    "temperature": 45.5,
+    "humidity": 65,
+    "wind_speed": 15
+  },
+  "alerts": [
+    {
+      "type": "TEMPERATURE_HIGH",
+      "severity": "HIGH",
+      "message": "Température très élevée: 45.5°C",
+      "threshold": 35.0,
+      "value": 45.5
+    }
+  ],
+  "alert_summary": {
+    "count": 1,
+    "max_severity": "HIGH"
+  },
+  "timestamps": {
+    "original": "2025-09-23T11:26:02.424139",
+    "transformed": "2025-09-23T11:26:02.547466",
+    "saved_to_hdfs": "2025-09-23T11:26:02.555054"
+  },
+  "hdfs_info": {
+    "path": "./hdfs-data\\uae\\dubai",
+    "filename": "alerts_20250923_112602.json"
+  }
+}

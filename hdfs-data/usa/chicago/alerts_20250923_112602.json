@@ -1,0 +1,35 @@
+{
+  "location": {
+    "city": "Chicago",
+    "country": "USA",
+    "latitude": 41.8781,
+    "longitude": -87.6298
+  },
+  "weather_data": {
+    "temperature": 15.0,
+    "humidity": 70,
+    "wind_speed": 65
+  },
+  "alerts": [
+    {
+      "type": "WIND_HIGH",
+      "severity": "HIGH",
+      "message": "Vent très fort: 65 km/h",
+      "threshold": 50.0,
+      "value": 65
+    }
+  ],
+  "alert_summary": {
+    "count": 1,
+    "max_severity": "HIGH"
+  },
+  "timestamps": {
+    "original": "2025-09-23T11:26:02.424187",
+    "transformed": "2025-09-23T11:26:02.564631",
+    "saved_to_hdfs": "2025-09-23T11:26:02.569966"
+  },
+  "hdfs_info": {
+    "path": "./hdfs-data\\usa\\chicago",
+    "filename": "alerts_20250923_112602.json"
+  }
+}
