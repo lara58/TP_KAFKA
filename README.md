@@ -24,29 +24,29 @@ Projet de traitement de données météorologiques en temps réel utilisant Apac
 
 Apache Kafka résout le problème de complexité dans la gestion des flux de données entre systèmes multiples :
 
-![Capture d'écran 2025-09-23 152219.png](Capture%20d'écran%202025-09-23%20152219.png)
+![Architecture sans Kafka - Problème de complexité](kafka_architecture_problem.png)
 
 **Sans Kafka** : Connexions point-à-point complexes entre tous les systèmes
 
 ### Découplage des Flux de Données
 
-![Capture d'écran 2025-09-23 152245.png](Capture%20d'écran%202025-09-23%20152245.png)
+![Découplage avec Kafka](kafka_decoupling.png)
 
 **Avec Kafka** : Centralisation des flux de données via un seul point d'entrée
 
 ### Architecture Producer-Broker-Consumer
 
-![Capture d'écran 2025-09-23 152357.png](Capture%20d'écran%202025-09-23%20152357.png)
+![Producer vers Brokers](kafka_producer_broker.png)
 
 **Distribution automatique** : Les producers envoient les données vers les brokers qui les répartissent automatiquement
 
-![Capture d'écran 2025-09-23 152422.png](Capture%20d'écran%202025-09-23%20152422.png)
+![Consumer lecture ordonnée](kafka_consumer_read.png)
 
 **Lecture ordonnée** : Les consumers lisent les données dans l'ordre depuis les partitions
 
 ### Partitionnement et Scalabilité
 
-![Capture d'écran 2025-09-23 152500.png](Capture%20d'écran%202025-09-23%20152500.png)
+![Partitions Kafka](kafka_partitions.png)
 
 **Partitions multiples** : Chaque topic est divisé en partitions pour une meilleure performance
 
