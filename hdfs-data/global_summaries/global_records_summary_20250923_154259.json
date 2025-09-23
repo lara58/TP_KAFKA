@@ -1,0 +1,33 @@
+{
+  "message_type": "weather_records_summary",
+  "emission_timestamp": "2025-09-23T15:42:58.387398",
+  "source": "simple_records_analyzer",
+  "analysis_summary": {
+    "total_cities_analyzed": 1,
+    "countries": [
+      "france"
+    ],
+    "total_measurements": 99600
+  },
+  "global_records": {
+    "hottest_temperature": {
+      "value": 40.9,
+      "city": "paris",
+      "country": "france",
+      "date": "2019-07-25"
+    },
+    "coldest_temperature": {
+      "value": -9.9,
+      "city": "paris",
+      "country": "france",
+      "date": "2018-02-08"
+    },
+    "strongest_wind": {
+      "value": 52.0,
+      "value_kmh": 187.20000000000002,
+      "city": "paris",
+      "country": "france",
+      "date": "2017-01-12"
+    }
+  }
+}

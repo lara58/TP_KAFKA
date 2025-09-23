@@ -1,0 +1,49 @@
+{
+  "city": "paris",
+  "country": "france",
+  "analysis_timestamp": "2025-09-23T15:42:58.274929",
+  "data_summary": {
+    "total_measurements": 99600,
+    "period_start": "2014-01-01",
+    "period_end": "2025-01-01",
+    "years_analyzed": 11
+  },
+  "temperature_records": {
+    "hottest_day": {
+      "date": "2019-07-25",
+      "temperature": 40.9,
+      "exact_datetime": "2019-07-25T16:00"
+    },
+    "coldest_day": {
+      "date": "2018-02-08",
+      "temperature": -9.9,
+      "exact_datetime": "2018-02-08T07:00"
+    }
+  },
+  "wind_records": {
+    "strongest_wind": {
+      "datetime": "2017-01-12T23:00",
+      "date": "2017-01-12",
+      "wind_speed": 52.0,
+      "wind_speed_kmh": 187.20000000000002
+    }
+  },
+  "precipitation_records": {
+    "rainiest_day": {
+      "date": "2024-08-01",
+      "precipitation": 58.800000000000004
+    },
+    "rainiest_month": {
+      "year": 2016,
+      "month": 5,
+      "precipitation": 172.59999999999997
+    },
+    "max_hourly_rain": {
+      "datetime": "2024-06-29T15:00",
+      "precipitation": 15.4
+    }
+  },
+  "message_type": "weather_records",
+  "emission_timestamp": "2025-09-23T15:42:58.285469",
+  "source": "simple_records_analyzer"
+}
