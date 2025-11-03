@@ -5,11 +5,11 @@
 ![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-## 🌦️ Description du Projet
+## Description du Projet
 
 Projet de traitement de données météorologiques en temps réel utilisant Apache Kafka, Python et Spark. Ce TP implémente une architecture de streaming complète pour l'analyse climatologique avec validation et enrichissement des données.
 
-## 📋 Table des Matières
+## Table des Matières
 
 - [Architecture Kafka](#-architecture-kafka)
 - [Exercices Implémentés](#-exercices-implémentés)
@@ -18,7 +18,7 @@ Projet de traitement de données météorologiques en temps réel utilisant Apac
 - [Structure du Projet](#-structure-du-projet)
 - [Résultats et Démonstrations](#-résultats-et-démonstrations)
 
-## 🏗️ Architecture Kafka
+## Architecture Kafka
 
 ### Pourquoi Apache Kafka ?
 
@@ -50,7 +50,7 @@ Apache Kafka résout le problème de complexité dans la gestion des flux de don
 
 **Partitions multiples** : Chaque topic est divisé en partitions pour une meilleure performance
 
-## 🎯 Exercices Implémentés
+## Exercices Implémentés
 
 ### Exercice 10 : Détection des Records Climatiques
 - **Objectif** : Détection des valeurs extrêmes (température, vent, précipitations)
@@ -81,7 +81,7 @@ Apache Kafka résout le problème de complexité dans la gestion des flux de don
   - Détection d'anomalies (méthode IQR)
 - **Sauvegarde** : `/hdfs-data/{country}/{city}/seasonal_profile_enriched/{year}/`
 
-## 🚀 Installation et Configuration
+## Installation et Configuration
 
 ### Prérequis
 ```bash
@@ -111,7 +111,7 @@ pip install requests numpy
 docker-compose up -d
 ```
 
-## 🎮 Utilisation
+## Utilisation
 
 ### Exercice 10 - Records Climatiques
 ```bash
@@ -140,7 +140,7 @@ python seasonal_profile_validator.py
 python exercise12_simulation.py
 ```
 
-## 📁 Structure du Projet
+##  Structure du Projet
 
 ```
 TP_KAFKA/
@@ -171,7 +171,7 @@ TP_KAFKA/
     └── global_summaries/                # Synthèses globales
 ```
 
-## 📊 Résultats et Démonstrations
+##  Résultats et Démonstrations
 
 ### Données Traitées
 - **Volume** : 99,600 mesures météorologiques
@@ -215,7 +215,7 @@ Tous les résultats sont sauvegardés en JSON structuré avec :
 }
 ```
 
-## 🔧 Fonctionnalités Techniques
+## Fonctionnalités Techniques
 
 ### Kafka Simulation
 - Threading Producer/Consumer
@@ -235,7 +235,7 @@ Tous les résultats sont sauvegardés en JSON structuré avec :
 - Sauvegarde JSON structurée
 - Historique complet des analyses
 
-## 🎓 Objectifs Pédagogiques Atteints
+## Objectifs Pédagogiques Atteints
 
 1. **Architecture Kafka** : Compréhension des concepts Producer/Consumer
 2. **Streaming de données** : Traitement en temps réel simulé
@@ -243,18 +243,18 @@ Tous les résultats sont sauvegardés en JSON structuré avec :
 4. **Validation de données** : Contrôles qualité et cohérence
 5. **Structure de stockage** : Organisation HDFS enterprise-grade
 
-## 📝 Branches du Projet
+##  Branches du Projet
 
 - `master` : Documentation principale et README
 - `exo10` : Détection des records climatiques
 - `exo11` : Climatologie urbaine et profils saisonniers
 - `exo12` : Validation et enrichissement des profils
 
-## 🤝 Contribution
+##  Contribution
 
 Ce projet est réalisé dans le cadre d'un TP académique. Les exercices sont progressifs et construisent une architecture complète de traitement de données météorologiques.
 
-## 📜 Licence
+##  Licence
 
 Projet académique - TP KAFKA
 
